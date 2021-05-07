@@ -12,7 +12,7 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: auth-service
-          uri: lb://auth-service
+        - id: asku-auth-service
+          uri: lb://asku-auth-service
           predicates:
             - Path=/auth/**
