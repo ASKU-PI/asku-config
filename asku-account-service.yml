@@ -1,0 +1,17 @@
+server:
+  port: 8890
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+    password: ${AUTH_DB_PASSWORD}
+    url: jdbc:mysql://account-db:3306/authdb
+    username: ${AUTH_DB_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false
