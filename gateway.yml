@@ -16,7 +16,9 @@ spring:
           uri: lb://asku-auth-service
           predicates:
             - Path=/auth/**
+            - RewritePath=^/auth,
         - id: asku-account-service
           uri: lb://asku-account-service
           predicates:
-            - Path=/api/account/**
+            - Path=/account/**
+            - RewritePath=^/account,
