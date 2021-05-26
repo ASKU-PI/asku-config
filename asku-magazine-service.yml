@@ -1,0 +1,17 @@
+server:
+  port: 8891
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+    password: ${MAGAZINE_DB_PASSWORD}
+    url: jdbc:mysql://magazine-db:3306/magazinedb
+    username: ${MAGAZINE_DB_USERNAME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: false

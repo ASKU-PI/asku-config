@@ -24,3 +24,9 @@ spring:
             - Path=/account/**
           filters:
             - RewritePath=/account/(?<segment>.*), /$\{segment}
+        - id: asku-magazine-service
+          uri: lb://asku-magazine-service
+          predicates:
+            - Path=/magazine/**
+          filters:
+            - RewritePath=/magazine/(?<segment>.*), /$\{segment}
