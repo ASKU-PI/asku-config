@@ -17,10 +17,10 @@ spring:
           predicates:
             - Path=/auth/**
           filters:
-            - RewritePath=^/auth,
+            - RewritePath=/auth/(?<segment>.*), /$\{segment}
         - id: asku-account-service
           uri: lb://asku-account-service
           predicates:
             - Path=/account/**
           filters:
-            - RewritePath=^/account,
+            - RewritePath=/account/(?<segment>.*), /$\{segment}
