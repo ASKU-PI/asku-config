@@ -27,7 +27,7 @@ spring:
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
             - RemoveRequestHeader=Authorization
-            - AddRequestHeader=Username, username
+            - AddRequestHeaderCustom=Username, username
         - id: asku-magazine-service
           uri: lb://asku-magazine-service
           predicates:
@@ -37,4 +37,4 @@ spring:
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
             - RemoveRequestHeader=Authorization
-            - AddRequestHeader=Username, username
+            - AddRequestHeaderCustom=Username, username
