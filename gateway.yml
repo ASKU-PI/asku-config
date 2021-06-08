@@ -23,6 +23,7 @@ spring:
           predicates:
             - Path=/account/**
           filters:
+            - RemoveRequestHeader=Username
             - AddRequestHeaderCustom=Username, username
             - RewritePath=/account/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
@@ -33,6 +34,7 @@ spring:
           predicates:
             - Path=/magazine/**
           filters:
+            - RemoveRequestHeader=Username
             - AddRequestHeaderCustom=Username, username
             - RewritePath=/magazine/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
