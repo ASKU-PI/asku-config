@@ -38,4 +38,3 @@ spring:
             - RewritePath=/magazine/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
-            - RemoveRequestHeader=Authorization
