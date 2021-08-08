@@ -28,7 +28,6 @@ spring:
             - RewritePath=/account/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
-            - RemoveRequestHeader=Authorization
         - id: asku-magazine-service
           uri: lb://asku-magazine-service
           predicates:
