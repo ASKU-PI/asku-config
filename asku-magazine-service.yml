@@ -1,6 +1,11 @@
 server:
   port: 8891
 
+jwt:
+  header: Authorization
+  secret: ${JWT_SECRET_KEY}
+  token-validity-in-seconds: 86400
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
