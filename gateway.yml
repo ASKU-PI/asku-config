@@ -34,3 +34,11 @@ spring:
             - RewritePath=/magazine/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
+        -id: asku-image-service
+          uri: lb://asku-image-service
+          predicates:
+            - Path=/image/**
+          filters:
+            - RewritePath=/image/(?<segment>.*). /$\{segment}
+            - RemoveRequestHeader=Cookie
+            - RemovreRequestHeader=Set-Cookie
