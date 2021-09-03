@@ -39,6 +39,6 @@ spring:
           predicates:
             - Path=/image/**
           filters:
-            - RewritePath=/image/(?<segment>.*). /$\{segment}
+            - RewritePath=/image/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
             - RemovreRequestHeader=Set-Cookie
