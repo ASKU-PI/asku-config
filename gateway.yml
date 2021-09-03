@@ -41,4 +41,4 @@ spring:
           filters:
             - RewritePath=/image/(?<segment>.*), /$\{segment}
             - RemoveRequestHeader=Cookie
-            - RemovreRequestHeader=Set-Cookie
+            - RemoveRequestHeader=Set-Cookie
