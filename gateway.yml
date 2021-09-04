@@ -35,7 +35,7 @@ spring:
             - RemoveRequestHeader=Cookie
             - RemoveRequestHeader=Set-Cookie
         - id: asku-image-service
-          uri: lb://asku-image-service
+          uri: http://asku-image-service:8892
           predicates:
             - Path=/image/**
           filters:
