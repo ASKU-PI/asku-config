@@ -11,7 +11,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
     password: ${MAGAZINE_DB_PASSWORD}
-    url: jdbc:mysql://magazine-db:3306/magazinedb
+    url: jdbc:mysql://db:3306/magazinedb
     username: ${MAGAZINE_DB_USERNAME}
   jpa:
     hibernate:

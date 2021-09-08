@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     initialization-mode: always
     password: ${ACCOUNT_DB_PASSWORD}
-    url: jdbc:mysql://account-db:3306/accountdb
+    url: jdbc:mysql://db:3306/accountdb
     username: ${ACCOUNT_DB_USERNAME}
   jpa:
     hibernate:
