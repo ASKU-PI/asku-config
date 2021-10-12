@@ -24,14 +24,6 @@ spring:
             - Path=/auth/**
           filters:
             - RewritePath=/auth/(?<segment>.*), /$\{segment}
-        - id: asku-account-service
-          uri: lb://asku-account-service
-          predicates:
-            - Path=/account/**
-          filters:
-            - RewritePath=/account/(?<segment>.*), /$\{segment}
-            - RemoveRequestHeader=Cookie
-            - RemoveRequestHeader=Set-Cookie
         - id: asku-magazine-service
           uri: lb://asku-magazine-service
           predicates:
