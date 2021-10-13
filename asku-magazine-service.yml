@@ -25,4 +25,4 @@ spring:
     show-sql: false
   jackson:
     serialization:
-      fail-on-empty-beans: falsecd
+      fail-on-empty-beans: false
